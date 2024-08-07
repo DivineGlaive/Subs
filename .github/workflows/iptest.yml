@@ -19,6 +19,7 @@ jobs:
 
     - name: Run script to create new configs
       run: |
+          cp https://raw.githubusercontent.com/Surfboardv2ray/Subs/main/IPTest/ips.txt ./IPTest/
           python IPTest/iptest.py
           
     - name: Check for new changes
@@ -31,6 +32,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add IPTest/output
+          git add IPTest/ips.txt
           timestamp=$(TZ='Asia/Tehran' date)
           git commit -m "✅Updated on ${timestamp}"
           git push
