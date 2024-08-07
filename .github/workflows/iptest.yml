@@ -21,7 +21,7 @@ jobs:
 
     - name: Copy IP List
       run: |
-          cp https://github.com/Surfboardv2ray/Subs/blob/main/IPTest/ips.txt ./IPTest/
+          curl -o ./IPTest/ips.txt https://raw.githubusercontent.com/Surfboardv2ray/Subs/main/IPTest/ips.txt
           
     - name: Run script to create new configs
       run: |
