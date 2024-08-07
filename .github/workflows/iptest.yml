@@ -12,8 +12,6 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
-        repository: Surfboardv2ray/Subs
-        path: Subs
       
     - name: Install dependencies
       run: |
@@ -25,8 +23,6 @@ jobs:
           
     - name: Run script to create new configs
       run: |
-          > IPTest/ips.txt
-          cp https://raw.githubusercontent.com/Surfboardv2ray/Subs/main/IPTest/ips.txt ./IPTest/
           python IPTest/iptest.py
           
     - name: Check for new changes
