@@ -19,6 +19,7 @@ jobs:
 
     - name: Run script to create new configs
       run: |
+          > IPTest/ips.txt
           cp https://raw.githubusercontent.com/Surfboardv2ray/Subs/main/IPTest/ips.txt ./IPTest/
           python IPTest/iptest.py
           
