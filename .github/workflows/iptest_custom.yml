@@ -1,4 +1,4 @@
-name: IPTest
+name: IPTest_CUSTOM
 on:
   push:
     paths:
